@@ -218,5 +218,13 @@ console.log(false && "Some String");
 console.log(hasMovieAdaptation && "This book has a movie");
 
 // truety and falsey operation
+
 console.log("sample" && "this is truety bro!");
 console.log(0 && "oww this is falsey bro!");
+
+console.log(true || "this is truety bro!");
+console.log(false || "oww this is falsey bro!");
+
+console.log(book.translations.spanish);
+const spanishTranslation = book.translations.spanish || "Not Translated";
+spanishTranslation;
