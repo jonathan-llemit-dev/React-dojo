@@ -228,3 +228,8 @@ console.log(false || "oww this is falsey bro!");
 console.log(book.translations.spanish);
 const spanishTranslation = book.translations.spanish || "Not Translated";
 spanishTranslation;
+
+// this ?? on circuit operator is 'nullish coalescing' unlike normal falsey, it will only return the 2nd value if the 1st value is null or undefined
+// means that empty string like '' and 0 is also true here and will return the 1st value
+const count = book.reviews.librarything.reviewsCount ?? "No data";
+count;
