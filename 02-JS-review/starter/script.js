@@ -216,3 +216,7 @@ console.log(`The book has ${pagesRange} pages`);
 console.log(true && "Some String");
 console.log(false && "Some String");
 console.log(hasMovieAdaptation && "This book has a movie");
+
+// truety and falsey operation
+console.log("sample" && "this is truety bro!");
+console.log(0 && "oww this is falsey bro!");
