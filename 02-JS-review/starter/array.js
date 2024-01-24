@@ -182,3 +182,10 @@ console.log(essentialData);
 // filter method is used to filter out the elements of array based on certain conditions
 const longBooks = books.filter((book) => book.pages > 500);
 console.log(longBooks);
+
+// here in filter method we can chain multiple filters
+const longBooksWithMovie = books
+  .filter((book) => book.pages > 500)
+  .filter((book) => book.hasMovieAdaptation);
+
+console.log(longBooksWithMovie);
