@@ -219,3 +219,6 @@ const arr2 = [3, 7, 1, 9, 6];
 const sorted2 = arr2.slice().sort((a, b) => a - b);
 console.log(sorted2);
 console.log(arr2);
+
+const sortedByPages = books.slice().sort((a, b) => b.pages - a.pages);
+console.log(sortedByPages);
