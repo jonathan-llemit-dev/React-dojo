@@ -189,3 +189,10 @@ const longBooksWithMovie = books
   .filter((book) => book.hasMovieAdaptation);
 
 console.log(longBooksWithMovie);
+
+// here we chain combination of filter and map methods for array
+const adventureBooks = books
+  .filter((book) => book.genres.includes("adventure"))
+  .map((book) => book.title);
+
+console.log(adventureBooks);
