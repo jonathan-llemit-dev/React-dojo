@@ -142,3 +142,17 @@ function getBooks() {
 function getBook(id) {
   return data.find((d) => d.id === id);
 }
+
+const books = getBooks();
+
+// array map method
+// iterating each element of array then apply a certain method
+const sampleArray = [1, 2, 3, 4, 5].map((i) => i * 2);
+console.log(sampleArray);
+
+// here we use arrow function to apply a certain method for each element of an array
+// (book) is the representation of a currently selected element for iteration of map method on array (book) can be renamed anything you want it does not matter.
+// the arrow function simple gets the book title of a selected book through iteration and because of map method the called title will gonna
+// simply replace the entire selected element thats why the output is only titles.
+const titles = books.map((book) => book.title);
+console.log(titles);
