@@ -145,6 +145,13 @@ function getBook(id) {
 
 const books = getBooks();
 
+// getting total reviews count
+function getTotalReviewsCount(book) {
+  const goodreads = book.reviews?.goodreads?.reviewsCount ?? 0;
+  const librarything = book.reviews?.librarything?.reviewsCount ?? 0;
+  return goodreads + librarything;
+}
+
 // array map method
 // iterating each element of array then apply a certain method
 const sampleArray = [1, 2, 3, 4, 5].map((i) => i * 2);
@@ -156,3 +163,14 @@ console.log(sampleArray);
 // simply replace the entire selected element thats why the output is only titles.
 const titles = books.map((book) => book.title);
 console.log(titles);
+
+// here we enclose with ({}) the entire method of map array method
+// we use this to get and declare multiple data and use multiple other functions without using a traditional function struction
+// we use this to maintain the arrow function
+const essentialData = books.map((book) => ({
+  title: book.title,
+  author: book.author,
+  reviewsCount: getTotalReviewsCount(book),
+}));
+
+console.log(essentialData);
