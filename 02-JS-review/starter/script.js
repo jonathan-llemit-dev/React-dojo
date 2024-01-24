@@ -231,5 +231,14 @@ spanishTranslation;
 
 // this ?? on circuit operator is 'nullish coalescing' unlike normal falsey, it will only return the 2nd value if the 1st value is null or undefined
 // means that empty string like '' and 0 is also true here and will return the 1st value
-const count = book.reviews.librarything.reviewsCount ?? "No data";
+const count = book.reviews.librarything?.reviewsCount ?? "No data";
 count;
+
+// optional chaining
+function getTotalReviewsCount(book) {
+  const goodreads = book.reviews?.goodreads?.reviewsCount ?? 0;
+  const librarything = book.reviews?.librarything?.reviewsCount ?? 0;
+  return goodreads + librarything;
+}
+
+console.log(getTotalReviewsCount(book));
