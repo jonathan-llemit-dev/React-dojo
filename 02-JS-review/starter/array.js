@@ -205,3 +205,10 @@ console.log(adventureBooks);
 // the second parameter inside function is the selected element on the iteration
 const pagesAllBooks = books.reduce((acc, book) => acc + book.pages, 0);
 console.log(pagesAllBooks);
+
+// array sort method
+// unlike map, filter, and reduce this sort method is not functional means that it will mutate the original array
+const arr1 = [3, 7, 1, 9, 6];
+const sorted1 = arr1.sort((a, b) => a - b);
+console.log(sorted1);
+console.log(arr1);
