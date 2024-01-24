@@ -154,6 +154,7 @@ function getTotalReviewsCount(book) {
 
 // array map method
 // iterating each element of array then apply a certain method
+// this method will not mutate a given array but producing a new array based on the result after applying the method
 const sampleArray = [1, 2, 3, 4, 5].map((i) => i * 2);
 console.log(sampleArray);
 
