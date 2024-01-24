@@ -212,3 +212,10 @@ const arr1 = [3, 7, 1, 9, 6];
 const sorted1 = arr1.sort((a, b) => a - b);
 console.log(sorted1);
 console.log(arr1);
+
+// when working with react we usually not like to mutate the data of original array but instead produce an output as a new array
+// a simple trick for sort method to avoid mutating data is to use slice method first
+const arr2 = [3, 7, 1, 9, 6];
+const sorted2 = arr2.slice().sort((a, b) => a - b);
+console.log(sorted2);
+console.log(arr2);
