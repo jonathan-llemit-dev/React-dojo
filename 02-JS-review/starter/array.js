@@ -196,3 +196,12 @@ const adventureBooks = books
   .map((book) => book.title);
 
 console.log(adventureBooks);
+
+// array reduce method
+// this method is used to boil down the entire array into one single value
+// here on reduce we have two params the function that will take action on each iteration and the starting value of accumulator
+// the accumulator can be renamed anything and its starting value can be number, string, or another array
+// when using the accumulator on the function it takes place as the first parameter
+// the second parameter inside function is the selected element on the iteration
+const pagesAllBooks = books.reduce((acc, book) => acc + book.pages, 0);
+console.log(pagesAllBooks);
