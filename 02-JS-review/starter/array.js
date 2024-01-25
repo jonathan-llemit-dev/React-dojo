@@ -222,3 +222,14 @@ console.log(arr2);
 
 const sortedByPages = books.slice().sort((a, b) => b.pages - a.pages);
 console.log(sortedByPages);
+
+// working with immutable arrays
+
+// add book object to array
+const newBook = {
+  id: 6,
+  title: "Noli Me Tangere",
+  author: "Jose Rizal",
+};
+const booksAfterAdd = [...books, newBook];
+console.log(booksAfterAdd);
