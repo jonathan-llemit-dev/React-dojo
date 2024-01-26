@@ -153,3 +153,12 @@ function getTotalReviewsCount(book) {
   const librarything = book.reviews?.librarything?.reviewsCount ?? 0;
   return goodreads + librarything;
 }
+
+// Asynchronous Javascript
+
+// promises
+fetch("https://jsonplaceholder.typicode.com/todos/")
+  .then((res) => res.json())
+  .then((data) => console.log(data));
+
+console.log("other process");
